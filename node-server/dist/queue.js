@@ -28,17 +28,15 @@ class ProcessQueue {
             }
         };
         this.printQueue = (msg) => {
-            console.log(msg.text);
             if (msg.next)
                 this.printQueue(msg.next);
         };
         this.start = () => __awaiter(this, void 0, void 0, function* () {
             while (this.first) {
-                this.printQueue(this.first);
                 yield this.processorFn(this.first);
                 this.first = this.first.next;
             }
-            console.log('queue empty!');
+            this.last = undefined;
         });
         this.processorFn = processorFn;
     }

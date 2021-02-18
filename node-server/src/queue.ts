@@ -32,16 +32,14 @@ export class ProcessQueue {
   }
 
   printQueue = (msg: QueueMessage) => {
-    console.log(msg.text)
     if (msg.next) this.printQueue(msg.next)
   }
 
   start = async () => {
     while (this.first) {
-      this.printQueue(this.first)
       await this.processorFn(this.first)
       this.first = this.first.next
     }
-    console.log('queue empty!')
+    this.last = undefined
   }
 }
