@@ -16,7 +16,8 @@
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "lodash": "^4.17.20"
+    "lodash": "^4.17.20",
+    "node-telegram-bot-api": "^0.51.0"
   },
   "devDependencies": {
     "@types/cookie-parser": "^1.4.2",
@@ -27,6 +28,7 @@
     "@types/jest": "^26.0.20",
     "@types/lodash": "^4.14.168",
     "@types/node": "^14.14.28",
+    "@types/node-telegram-bot-api": "^0.51.1",
     "@types/supertest": "^2.0.10",
     "got": "^11.8.1",
     "jest": "^26.6.3",
