@@ -4,7 +4,8 @@
   "description": "You ain&#39;t gonna need this.",
   "main": "src/index.ts",
   "scripts": {
-    "start": "node src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
     "start-dev": "nodemon src/index.ts"
   },
   "keywords": [],
